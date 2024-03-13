@@ -19,6 +19,7 @@
         {"trigger": "visit:greenway-bridge", "effect": {"page": "greenway-bridge"}}
     ],
     "map": {"id": "map", "code": "map", 
+        "menu": "~/map-menu.html",
         "icons": [
             {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 50]},
             {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 50]},
