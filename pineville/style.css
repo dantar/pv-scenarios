@@ -3,22 +3,19 @@ h1 {
     text-align: center;
 }
 
-.story {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: #ffffffaa;
-    border: 3px solid white;
-}
-
 .text-page {
     padding: 10px;
-    background-color: #ffffffaa;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 3px solid lightgray;
 }
 
 .window-buttons {
     position: relative;
     float: right;
+    display: flex;
+    margin-top: -40px;
 }
 
 .window-buttons img {
@@ -29,8 +26,60 @@ button img {
     width: 40px;
 }
 
-.freedom-park-locomotive-success img.icon-freedom-park-locomotive {
-    opacity: 0.5;
+.place-page {
+    background-color: #000000aa;
+}
+.story {
+    background-color: #000000aa;
+}
+
+.menu-button {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.menu-button img {
+    height: 36px;
+    width: 36px;
+    padding: 2px;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+.if-to-be-done {
+    display: initial;
+}
+.if-success {
+    display: none;
+}
+
+.game-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.game-form input {
+    font-size: 4em;
+    text-align: center;
+}
+.game-form button {
+    font-size: 2em;
+    text-align: center;
+}
+
+.image-with-caption {
+    width: 100%;
+    text-align: center;
+}
+.image-with-caption img {
+    width: 75%;
 }
 
 @media screen and (orientation:portrait) {

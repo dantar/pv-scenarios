@@ -109,8 +109,8 @@
     ],
     "stories": [
         {"id": "altra", "html": "~/freedom-park-locomotive/success.html"},
-        {"id": "freedom-park-locomotive-success", "html": "~/freedom-park-locomotive/success.html"},
-        {"id": "freedom-park-locomotive-failure", "html": "~/freedom-park-locomotive/failure.html"},
-        {"id": "nope-sorry", "html": "~/nope-sorry.html"}
+        {"id": "freedom-park-locomotive-success", "html": "~/success.html"},
+        {"id": "freedom-park-locomotive-failure", "html": "~/failure.html"},
+        {"id": "nope-sorry", "html": "~/failure.html"}
     ]
 }

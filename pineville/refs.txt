@@ -5,7 +5,6 @@ http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvaXRpbmVyYXJpLWlnbmF
 http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvaXRpbmVyYXJpLWlnbmF6aWFuaQ==/qr-porta-del-popolo
 
 Pineville
-# http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvcGluZXZpbGxl
 http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9waW5ldmlsbGU=
 
 https://github.com/bumbu/svg-pan-zoom

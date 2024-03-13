@@ -1,11 +1,4 @@
-<link href="~/style.css" rel="stylesheet" type="text/css" />
 <style>
-    .if-to-be-done {
-        display: initial;
-    }
-    .if-success {
-        display: none;
-    }
     .tag-freedom-park-locomotive-success .if-success {
         display: initial;
     }
@@ -13,23 +6,25 @@
         display: none;
     }
 </style>
-<div class="text-page">
-    <div class="window-buttons">
-        <img src="~/icons/destination.png" class="clickable" data-close="true" data-zoomto="freedom-park-locomotive" />
-        <img src="~/icons/takemeto.png" class="clickable" data-takemeto="freedom-park-locomotive" />
-        <button class="clickable" data-close="true">X</button>
-    </div>
-    <h1>Freedom's Park Big Monster</h1>
-    <div>
-        There is a big black metal monster in Freedom Park! 
-        Lurking in a cage, steaming, waiting for uncautious kids from the nearby playground to stray close enough to capture them!
-    </div>
-    <div class="if-to-be-done">
-        <div>Add up the four numbers of the panel and then subtract the number on the monster's nose, and you will get your prize!</div>
-        <div>
-            <input id="locomotive" name="locomotive" type="number" max="9999" maxlength="4" />
-            <button class="clickable" data-submit="locomotive:#locomotive">GO</button>
+<div class="place-page fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true" data-zoomto="freedom-park-locomotive"><img src="~/icons/destination.png" /></div>
+            <div class="menu-button clickable" data-takemeto="freedom-park-locomotive"><img src="~/icons/takemeto.png" /></div>
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
         </div>
+        <h1>Freedom's Park Big Monster</h1>
+        <p>
+            There is a big black metal monster in Freedom Park! 
+            Lurking in a cage, steaming, waiting for uncautious kids from the nearby playground to stray close enough to capture them!
+        </p>
+        <div class="if-to-be-done">
+            <p>Add up the four numbers of the panel and then subtract the number on the monster's nose, and you will get your prize!</p>
+            <div class="game-form">
+                <input id="locomotive" name="locomotive" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="locomotive:#locomotive">GO!</button>
+            </div>
+        </div>
+        <div class="if-success">Very good! you found the monster already!</div>
     </div>
-    <div class="if-success">Very good! you found the monster already!</div>
 </div>
