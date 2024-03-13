@@ -1,0 +1,115 @@
+{
+    "id": "Pineville",
+    "stylesheet": "~/style.css",
+    "rules": [
+        {"trigger": "start", "effect": {"page": "introduction"}},
+        {"trigger": "submit:locomotive", "switch": [
+            {
+                "condition": {"formvalue": "locomotive", "equals": "3892"}, 
+                "story": "freedom-park-locomotive-success",
+                "tag": "freedom-park-locomotive-success"
+            },
+            {"story": "freedom-park-locomotive-failure"}
+        ]},
+        {"trigger": "visit:home-sweet-home", "effect": {"page": "home-sweet-home"}},
+        {"trigger": "visit:old-settlers-cemetery", "effect": {"page": "old-settlers-cemetery"}},
+        {"trigger": "visit:freedom-park-locomotive", "effect": {"page": "freedom-park-locomotive"}},
+        {"trigger": "visit:the-writers-desk", "effect": {"page": "the-writers-desk"}},
+        {"trigger": "visit:president-polk", "effect": {"page": "president-polk"}},
+        {"trigger": "visit:greenway-bridge", "effect": {"page": "greenway-bridge"}}
+    ],
+    "map": {"id": "map", "code": "map", 
+        "icons": [
+            {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 50]},
+            {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 50]},
+            {"id": "gps", "url": "~/icons/gps.png", "size": [50,50], "anchor": [25, 40]}
+        ],
+        "features": [
+            {
+                "id": "home-sweet-home",
+                "nome": "Home sweet home", 
+                "icon": "default",
+                "pos": [35.08245684782761, -80.90806519693628]
+            },
+            {
+                "id": "greenway-bridge",
+                "nome": "Little Sugar Creek Greenway Bridge", 
+                "icon": "default",
+                "pos": [35.073890238155855, -80.89283729666059]
+            },
+            {
+                "id": "president-polk",
+                "nome": "President James K. Polk State Historic Site", 
+                "icon": "default",
+                "pos": [35.07798719505654, -80.8818632613765]
+            },
+            {
+                "id": "freedom-park-locomotive",
+                "nome": "Freedom Park's Locomotive", 
+                "icon": [
+                    {"condition": {"tag": "freedom-park-locomotive-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [35.19257864059098, -80.84316446082046]
+            },
+            {
+                "id": "old-settlers-cemetery",
+                "condition": {"tag": "freedom-park-locomotive-success"},
+                "nome": "Old Settlers' Cemetery", 
+                "icon": "default",
+                "pos": [35.229709666105904, -80.84302670305165]
+            },
+            {
+                "id": "the-writers-desk",
+                "nome": "The Writer's Desk", 
+                "icon": "default",
+                "pos": [35.227462768187706, -80.83766038320132]
+            },
+            {
+                "id": "percorso-A",
+                "nome": "Prova percorso",
+                "polyline": [
+                    "home-sweet-home", 
+                    "greenway-bridge",
+                    "president-polk",
+                    "freedom-park-locomotive",
+                    "the-writers-desk",
+                    "old-settlers-cemetery"
+                ],
+                "style": {
+                    "color": "#2278ff",
+                    "weight": 10,
+                    "opacity": 0.5
+                }
+            },
+            {
+                "id": "percorso-B",
+                "condition": {"tag": "freedom-park-locomotive-success"},
+                "nome": "Prova percorso",
+                "polyline": [
+                    "freedom-park-locomotive",
+                    "old-settlers-cemetery"
+                ],
+                "style": {
+                    "color": "#ff0000",
+                    "weight": 12,
+                    "opacity": 1
+                }
+            }
+        ]
+    },
+    "pages": [
+        {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "home-sweet-home", "url": "~/home-sweet-home.html"},
+        {"id": "president-polk", "url": "~/president-polk.html"},
+        {"id": "the-writers-desk", "url": "~/the-writers-desk.html"},
+        {"id": "freedom-park-locomotive", "url": "~/freedom-park-locomotive.html"},
+        {"id": "greenway-bridge", "url": "~/greenway-bridge.html"}
+    ],
+    "stories": [
+        {"id": "altra", "html": "~/freedom-park-locomotive/success.html"},
+        {"id": "freedom-park-locomotive-success", "html": "~/freedom-park-locomotive/success.html"},
+        {"id": "freedom-park-locomotive-failure", "html": "~/freedom-park-locomotive/failure.html"},
+        {"id": "nope-sorry", "html": "~/nope-sorry.html"}
+    ]
+}

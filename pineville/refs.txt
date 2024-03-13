@@ -1,0 +1,15 @@
+https://atlante.elabor.biz/ponte-virtuale/#/play/L2l0aW5lcmFyaS1pZ25hemlhbmk=
+https://atlante.elabor.biz/ponte-virtuale/#/play/L2l0aW5lcmFyaS1pZ25hemlhbmk=/qr-porta-del-popolo
+
+http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvaXRpbmVyYXJpLWlnbmF6aWFuaQ==
+http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvaXRpbmVyYXJpLWlnbmF6aWFuaQ==/qr-porta-del-popolo
+
+Pineville
+http://localhost:4200/#/play/aHR0cDovL2xvY2FsaG9zdC9kYW50YXIvcGluZXZpbGxl
+
+
+https://github.com/bumbu/svg-pan-zoom
+
+Flaticons
+https://www.flaticon.com/packs/maps-and-location-13928543
+https://www.flaticon.com/packs/navigation-maps?word=maps%20and%20location

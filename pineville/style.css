@@ -1,0 +1,47 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.story {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffffaa;
+    border: 3px solid white;
+}
+
+.text-page {
+    padding: 10px;
+    background-color: #ffffffaa;
+}
+
+.window-buttons {
+    position: relative;
+    float: right;
+}
+
+.window-buttons img {
+    width: 40px;
+}
+
+button img {
+    width: 40px;
+}
+
+.freedom-park-locomotive-success img.icon-freedom-park-locomotive {
+    opacity: 0.5;
+}
+
+@media screen and (orientation:portrait) {
+    .text-page {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .text-page {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
