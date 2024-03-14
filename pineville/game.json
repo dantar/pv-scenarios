@@ -27,6 +27,14 @@
             },
             {"story": "generic-failure"}
         ]},
+        {"trigger": "submit:old-settlers-cemetery", "switch": [
+            {
+                "condition": {"formvalue": "old-settlers-cemetery", "equals": "1121"}, 
+                "story": "generic-success",
+                "tag": "old-settlers-cemetery-success"
+            },
+            {"story": "generic-failure"}
+        ]},
         {"trigger": "visit:home-sweet-home", "effect": {"page": "home-sweet-home"}},
         {"trigger": "visit:old-settlers-cemetery", "effect": {"page": "old-settlers-cemetery"}},
         {"trigger": "visit:freedom-park-locomotive", "effect": {"page": "freedom-park-locomotive"}},
@@ -118,6 +126,7 @@
     },
     "pages": [
         {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "old-settlers-cemetery", "url": "~/old-settlers-cemetery.html"},
         {"id": "home-sweet-home", "url": "~/home-sweet-home.html"},
         {"id": "president-polk", "url": "~/president-polk.html"},
         {"id": "the-writers-desk", "url": "~/the-writers-desk.html"},
@@ -125,9 +134,7 @@
         {"id": "greenway-bridge", "url": "~/greenway-bridge.html"}
     ],
     "stories": [
-        {"id": "altra", "html": "~/freedom-park-locomotive/success.html"},
         {"id": "generic-success", "html": "~/success.html"},
-        {"id": "generic-failure", "html": "~/failure.html"},
-        {"id": "nope-sorry", "html": "~/failure.html"}
+        {"id": "generic-failure", "html": "~/failure.html"}
     ]
 }
