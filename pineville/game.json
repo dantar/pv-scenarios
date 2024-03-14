@@ -35,6 +35,14 @@
             },
             {"story": "generic-failure"}
         ]},
+        {"trigger": "submit:president-polk", "switch": [
+            {
+                "condition": {"formvalue": "president-polk", "equals": "7395"}, 
+                "story": "generic-success",
+                "tag": "president-polk-success"
+            },
+            {"story": "generic-failure"}
+        ]},
         {"trigger": "visit:home-sweet-home", "effect": {"page": "home-sweet-home"}},
         {"trigger": "visit:old-settlers-cemetery", "effect": {"page": "old-settlers-cemetery"}},
         {"trigger": "visit:freedom-park-locomotive", "effect": {"page": "freedom-park-locomotive"}},
@@ -69,13 +77,19 @@
             {
                 "id": "greenway-bridge",
                 "nome": "Little Sugar Creek Greenway Bridge", 
-                "icon": "default",
+                "icon": [
+                    {"condition": {"tag": "greenway-bridge-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
                 "pos": [35.073890238155855, -80.89283729666059]
             },
             {
                 "id": "president-polk",
                 "nome": "President James K. Polk State Historic Site", 
-                "icon": "default",
+                "icon": [
+                    {"condition": {"tag": "president-polk-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
                 "pos": [35.07798719505654, -80.8818632613765]
             },
             {
@@ -106,8 +120,8 @@
                 "pos": [35.227462768187706, -80.83766038320132]
             },
             {
-                "id": "percorso-A",
-                "nome": "Prova percorso",
+                "id": "itinerary",
+                "nome": "Itineary",
                 "polyline": [
                     "greenway-bridge",
                     "president-polk",

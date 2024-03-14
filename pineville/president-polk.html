@@ -1,9 +1,47 @@
-<link href="~/style.css" rel="stylesheet" type="text/css" />
-<div class="text-page clickable" data-close="true">
-    <div class="window-buttons">
-        <img src="~/icons/destination.png" class="clickable" data-close="true" data-zoomto="president-polk" />
-        <img src="~/icons/takemeto.png" class="clickable" data-takemeto="president-polk" />
+<style>
+    .tag-president-polk-success .if-success {
+        display: initial;
+    }
+    .tag-president-polk-success .if-to-be-done {
+        display: none;
+    }
+</style>
+<div class="place-page fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true" data-zoomto="president-polk"><img src="~/icons/map-one-place.png" /></div>
+            <div class="menu-button clickable" data-takemeto="president-polk"><img src="~/icons/takemeto.png" /></div>
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>President James K. Polk State Historic Site</h1>
+        <p>
+            James Knox Polk was the eleventh president of the United States. 
+            He was born in a log cabin in Pineville, North Carolina.
+        </p>
+        <div class="image-with-caption">
+            <img src="~/images/president-polk.png"/>
+        </div>
+
+        <div class="if-to-be-done">
+            <p>
+                Add up all the numbers you find written on the stone plaque on the landmark pyramid where once stood the house in which he was born.
+            </p>
+            <div class="image-with-caption">
+                <img src="~/images/president-polk-stone.png"/>
+            </div>
+        
+            <div class="game-form">
+                <input id="president-polk" name="president-polk" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="president-polk:#president-polk">GO!</button>
+            </div>
+        </div>
+        <div class="if-success">
+            <div class="image-with-caption">
+                <img src="~/images/success.png"/>
+                <p>You passed this game already!</p>
+            </div>
+        </div>
+
     </div>
-    <h1>President James K. Polk State Historic Site</h1>
-    <div>What a weird president!</div>
 </div>
