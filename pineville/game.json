@@ -11,14 +11,6 @@
             },
             {"story": "freedom-park-locomotive-failure"}
         ]},
-        {"trigger": "submit:home-sweet-home", "switch": [
-            {
-                "condition": {"formvalue": "home-sweet-home", "equals": "3892"}, 
-                "story": "generic-success",
-                "tag": "home-sweet-home-success"
-            },
-            {"story": "generic-failure"}
-        ]},
         {"trigger": "submit:the-writers-desk", "switch": [
             {
                 "condition": {"formvalue": "the-writers-desk", "equals": "9648"}, 
@@ -40,6 +32,27 @@
                 "condition": {"formvalue": "president-polk", "equals": "7395"}, 
                 "story": "generic-success",
                 "tag": "president-polk-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:greenway-bridge", "switch": [
+            {
+                "condition": {"formvalue": "greenway-bridge", "equals": "96"}, 
+                "story": "generic-success",
+                "tag": "greenway-bridge-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:home-sweet-home", "switch": [
+            {
+                "condition": {"formvalue": "home-sweet-home", "equals": "132"}, 
+                "story": "final-success",
+                "tag": "home-sweet-home-success"
+            },
+            {
+                "condition": {"formvalue": "home-sweet-home", "equals": "2152"}, 
+                "story": "special-success",
+                "tag": "home-sweet-home-success"
             },
             {"story": "generic-failure"}
         ]},
@@ -149,6 +162,8 @@
     ],
     "stories": [
         {"id": "generic-success", "html": "~/success.html"},
+        {"id": "final-success", "html": "~/final-success.html"},
+        {"id": "special-success", "html": "~/special-success.html"},
         {"id": "generic-failure", "html": "~/failure.html"}
     ]
 }

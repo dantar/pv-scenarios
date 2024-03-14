@@ -14,29 +14,37 @@
             <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
         </div>
 
-        <h1>McCoullough Club House</h1>
+        <h1>McCullough's Club House</h1>
         <p>
             The best time in every trip is the time you go back home. 
             There's no place like home, after all.
         </p>
-        <div class="image-with-caption">
-            <img src="~/images/home-sweet-home.png"/>
-        </div>
 
         <div class="if-to-be-done">
             <p>This will be the final game, you are so close to the end!</p>
-            <p>Multiply the number of columns by the number of bars in the little front gate: what number do you get?</p>
-            <div class="game-form">
-                <input id="home-sweet-home" name="home-sweet-home" type="number" max="9999" maxlength="4" size="4" />
-                <button class="clickable" data-submit="home-sweet-home:#home-sweet-home">GO!</button>
+            <div class="image-with-caption">
+                <img src="~/images/home-sweet-home.png"/>
             </div>
         </div>
         <div class="if-success">
             <div class="image-with-caption">
                 <img src="~/images/success.png"/>
                 <p>You passed this game already!</p>
+                <p>But you can give it another try to add <bold>something special</bold>!</p>
             </div>
         </div>
+
+        <div>
+            <p>
+                Multiply the number of <bold>round columns</bold> that you find at the McCullough's entry Towers 
+                by the number of <bold>slimmer bars</bold> in the little front gate of the Club House you see here above: what number do you get?
+            </p>
+            <div class="game-form">
+                <input id="home-sweet-home" name="home-sweet-home" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="home-sweet-home:#home-sweet-home">GO!</button>
+            </div>
+        </div>
+
 
     </div>
 </div>

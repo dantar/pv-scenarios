@@ -1,9 +1,45 @@
-<link href="~/style.css" rel="stylesheet" type="text/css" />
-<div class="text-page clickable" data-close="true">
-    <div class="window-buttons">
-        <img src="~/icons/destination.png" class="clickable" data-close="true" data-zoomto="greenway-bridge" />
-        <img src="~/icons/takemeto.png" class="clickable" data-takemeto="greenway-bridge" />
+<style>
+    .tag-greenway-bridge-success .if-success {
+        display: initial;
+    }
+    .tag-greenway-bridge-success .if-to-be-done {
+        display: none;
+    }
+</style>
+<div class="place-page fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true" data-zoomto="greenway-bridge"><img src="~/icons/map-one-place.png" /></div>
+            <div class="menu-button clickable" data-takemeto="greenway-bridge"><img src="~/icons/takemeto.png" /></div>
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>Little Sugar Creek Greenway Bridge</h1>
+        <p>
+            This is such a beautiful walk. 
+            All in the wood and green, intertwining with a nice stream. 
+            Perfect for spending some time out strolling and relaxing.
+        </p>
+        
+        <div class="if-to-be-done">
+            <p>
+                How many triangles can you count at the bridge edges, total left and right?
+            </p>
+            <div class="image-with-caption">
+                <img src="~/images/greenway-bridge.png"/>
+            </div>
+            
+            <div class="game-form">
+                <input id="greenway-bridge" name="greenway-bridge" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="greenway-bridge:#greenway-bridge">GO!</button>
+            </div>
+        </div>
+        <div class="if-success">
+            <div class="image-with-caption">
+                <img src="~/images/success.png"/>
+                <p>You passed this game already!</p>
+            </div>
+        </div>
+
     </div>
-    <h1>Little Sugar Creek Greenway Bridge</h1>
-    <div>Such a long bridge!</div>
 </div>
