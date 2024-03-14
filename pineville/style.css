@@ -79,7 +79,7 @@ button img {
     text-align: center;
 }
 .image-with-caption img {
-    width: 75%;
+    max-width: 90%;
 }
 
 @media screen and (orientation:portrait) {

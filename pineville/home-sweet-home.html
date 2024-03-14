@@ -1,14 +1,40 @@
-<link href="~/style.css" rel="stylesheet" type="text/css" />
-<div class="text-page not-clickable" data-close="true">
-    <div class="window-buttons">
-        <img src="~/icons/destination.png" class="clickable" data-close="true" data-zoomto="home-sweet-home" />
-        <img src="~/icons/takemeto.png" class="clickable" data-takemeto="home-sweet-home" />
-    </div>
-    <h1>Home Sweet Home!</h1>
-    <div>There's no place like home!</div>
-    <div>You can change your name, here</div>
-    <div>
-        <input id="username" name="username" type="text" value="~(variable:username)"/>
-        <button class="clickable" data-submit="username:#username">Salva</button>
+<style>
+    .tag-home-sweet-home-success .if-success {
+        display: initial;
+    }
+    .tag-home-sweet-home-success .if-to-be-done {
+        display: none;
+    }
+</style>
+<div class="place-page fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true" data-zoomto="home-sweet-home"><img src="~/icons/map-one-place.png" /></div>
+            <div class="menu-button clickable" data-takemeto="home-sweet-home"><img src="~/icons/takemeto.png" /></div>
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>McCoullough Club House!</h1>
+        <p>
+            Such a beautiful place!
+        </p>
+        <div class="image-with-caption">
+            <img src="~/images/home-sweet-home.png"/>
+        </div>
+
+        <div class="if-to-be-done">
+            <p>Multiply the number of columns by the number of bars in the little front gate: what number do you get?</p>
+            <div class="game-form">
+                <input id="home-sweet-home" name="home-sweet-home" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="home-sweet-home:#home-sweet-home">GO!</button>
+            </div>
+        </div>
+        <div class="if-success">
+            <div class="image-with-caption">
+                <img src="~/images/success.png"/>
+                <p>You passed this game already!</p>
+            </div>
+        </div>
+
     </div>
 </div>

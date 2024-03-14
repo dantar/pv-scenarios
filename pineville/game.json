@@ -11,6 +11,22 @@
             },
             {"story": "freedom-park-locomotive-failure"}
         ]},
+        {"trigger": "submit:home-sweet-home", "switch": [
+            {
+                "condition": {"formvalue": "home-sweet-home", "equals": "3892"}, 
+                "story": "generic-success",
+                "tag": "home-sweet-home-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:the-writers-desk", "switch": [
+            {
+                "condition": {"formvalue": "the-writers-desk", "equals": "9648"}, 
+                "story": "generic-success",
+                "tag": "the-writers-desk-success"
+            },
+            {"story": "generic-failure"}
+        ]},
         {"trigger": "visit:home-sweet-home", "effect": {"page": "home-sweet-home"}},
         {"trigger": "visit:old-settlers-cemetery", "effect": {"page": "old-settlers-cemetery"}},
         {"trigger": "visit:freedom-park-locomotive", "effect": {"page": "freedom-park-locomotive"}},
@@ -21,16 +37,26 @@
     "map": {"id": "map", "code": "map", 
         "menu": "~/map-menu.html",
         "icons": [
-            {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 50]},
-            {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 50]},
-            {"id": "gps", "url": "~/icons/gps.png", "size": [50,50], "anchor": [25, 40]}
+            {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "gps", "url": "~/icons/gps.png", "size": [50,50], "anchor": [25, 43]}
         ],
         "features": [
             {
                 "id": "home-sweet-home",
+                "condition": {"and": [
+                    {"tag": "freedom-park-locomotive-success"},
+                    {"tag": "the-writers-desk-success"},
+                    {"tag": "president-polk-success"},
+                    {"tag": "old-settlers-cemetery-success"},
+                    {"tag": "greenway-bridge-success"}
+                ]},
                 "nome": "Home sweet home", 
-                "icon": "default",
-                "pos": [35.08245684782761, -80.90806519693628]
+                "icon": [
+                    {"condition": {"tag": "home-sweet-home-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [35.08743349518059, -80.90489199700302]
             },
             {
                 "id": "greenway-bridge",
@@ -55,46 +81,37 @@
             },
             {
                 "id": "old-settlers-cemetery",
-                "condition": {"tag": "freedom-park-locomotive-success"},
                 "nome": "Old Settlers' Cemetery", 
-                "icon": "default",
+                "icon": [
+                    {"condition": {"tag": "old-settlers-cemetery-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
                 "pos": [35.229709666105904, -80.84302670305165]
             },
             {
                 "id": "the-writers-desk",
                 "nome": "The Writer's Desk", 
-                "icon": "default",
+                "icon": [
+                    {"condition": {"tag": "the-writers-desk-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
                 "pos": [35.227462768187706, -80.83766038320132]
             },
             {
                 "id": "percorso-A",
                 "nome": "Prova percorso",
                 "polyline": [
-                    "home-sweet-home", 
                     "greenway-bridge",
                     "president-polk",
                     "freedom-park-locomotive",
                     "the-writers-desk",
-                    "old-settlers-cemetery"
+                    "old-settlers-cemetery",
+                    "home-sweet-home"
                 ],
                 "style": {
-                    "color": "#2278ff",
+                    "color": "#008080",
                     "weight": 10,
-                    "opacity": 0.5
-                }
-            },
-            {
-                "id": "percorso-B",
-                "condition": {"tag": "freedom-park-locomotive-success"},
-                "nome": "Prova percorso",
-                "polyline": [
-                    "freedom-park-locomotive",
-                    "old-settlers-cemetery"
-                ],
-                "style": {
-                    "color": "#ff0000",
-                    "weight": 12,
-                    "opacity": 1
+                    "opacity": 0.6
                 }
             }
         ]
@@ -109,8 +126,8 @@
     ],
     "stories": [
         {"id": "altra", "html": "~/freedom-park-locomotive/success.html"},
-        {"id": "freedom-park-locomotive-success", "html": "~/success.html"},
-        {"id": "freedom-park-locomotive-failure", "html": "~/failure.html"},
+        {"id": "generic-success", "html": "~/success.html"},
+        {"id": "generic-failure", "html": "~/failure.html"},
         {"id": "nope-sorry", "html": "~/failure.html"}
     ]
 }

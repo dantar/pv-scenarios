@@ -1,9 +1,43 @@
-<link href="~/style.css" rel="stylesheet" type="text/css" />
-<div class="text-page clickable" data-close="true">
-    <div class="window-buttons">
-        <img src="~/icons/destination.png" class="clickable" data-close="true" data-zoomto="the-writers-desk" />
-        <img src="~/icons/takemeto.png" class="clickable" data-takemeto="the-writers-desk" />
+<style>
+    .tag-the-writers-desk-success .if-success {
+        display: initial;
+    }
+    .tag-the-writers-desk-success .if-to-be-done {
+        display: none;
+    }
+</style>
+<div class="place-page fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true" data-zoomto="the-writers-desk"><img src="~/icons/map-one-place.png" /></div>
+            <div class="menu-button clickable" data-takemeto="the-writers-desk"><img src="~/icons/takemeto.png" /></div>
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>The Writer's Desk</h1>
+        <p>
+            All book lovers would have nothing to read if it wasn't for some wonderful people that pour their thoughts in the book pages.
+        </p>
+
+        <div class="if-to-be-done">
+            <p>
+                Find a big pencil in this place with the writing you see down here. 
+                The digits will form a 4 digit number that you must multiply to find the answer.
+            </p>
+            <div class="image-with-caption">
+                <img src="~/images/the-writers-desk.png"/>
+            </div>
+            <div class="game-form">
+                <input id="the-writers-desk" name="the-writers-desk" type="number" max="9999" maxlength="4" size="4" />
+                <button class="clickable" data-submit="the-writers-desk:#the-writers-desk">GO!</button>
+            </div>
+        </div>
+        <div class="if-success">
+            <div class="image-with-caption">
+                <img src="~/images/success.png"/>
+                <p>You passed this game already!</p>
+            </div>
+        </div>
+
     </div>
-    <h1>The Writer's Desk</h1>
-    <div>Big pencils!</div>
 </div>
