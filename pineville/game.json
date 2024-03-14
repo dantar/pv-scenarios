@@ -6,10 +6,10 @@
         {"trigger": "submit:locomotive", "switch": [
             {
                 "condition": {"formvalue": "locomotive", "equals": "3892"}, 
-                "story": "freedom-park-locomotive-success",
+                "story": "generic-success",
                 "tag": "freedom-park-locomotive-success"
             },
-            {"story": "freedom-park-locomotive-failure"}
+            {"story": "generic-failure"}
         ]},
         {"trigger": "submit:the-writers-desk", "switch": [
             {
