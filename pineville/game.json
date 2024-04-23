@@ -161,9 +161,9 @@
         {"id": "greenway-bridge", "url": "~/greenway-bridge.html"}
     ],
     "stories": [
-        {"id": "generic-success", "html": "~/success.html"},
-        {"id": "final-success", "html": "~/final-success.html"},
-        {"id": "special-success", "html": "~/special-success.html"},
-        {"id": "generic-failure", "html": "~/failure.html"}
+        {"id": "generic-success", "url": "~/success.html", "template": "~/story-template.html"},
+        {"id": "final-success", "url": "~/final-success.html", "template": "~/story-template.html"},
+        {"id": "special-success", "url": "~/special-success.html", "template": "~/story-template.html"},
+        {"id": "generic-failure", "url": "~/failure.html", "template": "~/story-template.html"}
     ]
 }
