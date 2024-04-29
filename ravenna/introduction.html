@@ -1,0 +1,84 @@
+<div class="story fullpage">
+    <style>
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        } 
+        .badges .image-with-caption{
+            width: 45%;
+        } 
+        .badges img {
+            opacity: 0.2;
+        }
+        .tag-battistero-neoniano-success .badges .battistero-neoniano img,
+        .tag-battistero-degli-ariani-success .badges .battistero-degli-ariani img,
+        .tag-basilica-sant-apollinare-nuovo-success .badges .basilica-sant-apollinare-nuovo img,
+        .tag-piazza-del-popolo-success .badges .piazza-del-popolo img,
+        .tag-tomba-di-dante-success .badges .tomba-di-dante img,
+        .tag-mausoleo-galla-placidia-success .badges .mausoleo-galla-placidia img,
+        .tag-basilica-san-francesco-success .badges .basilica-san-francesco img,
+        .tag-basilica-san-vitale-success .badges .basilica-san-vitale img {
+            opacity: 1;
+        }
+    </style>
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>Benvenuti a Ravenna!</h1>
+
+        <p>
+            Domani si torna tutti alle nostre faccende, ma oggi possiamo ancora fare un gioco insieme esplorando Ravenna!
+        </p>
+
+        <p>
+            In ogni tappa del gioco vi verrà fatta una domanda a cui potrete rispondere una volta che avete raggiunto un posto preciso. 
+            Riuscirete a rispondere a tutte le domande e quindi collezionare tutti i trofei? 
+        </p>
+
+        <div class="badges">
+
+            <div class="image-with-caption clickable basilica-san-vitale" data-page="basilica-san-vitale">
+                <img src="~/images/basilica-san-vitale.png"/>
+                <p>Basilica di San Vitale</p>
+            </div>
+            <div class="image-with-caption clickable basilica-san-francesco" data-page="basilica-san-francesco">
+                <img src="~/images/basilica-san-francesco.png"/>
+                <p>Basilica di San Francesco</p>
+            </div>
+            <div class="image-with-caption clickable battistero-neoniano" data-page="battistero-neoniano">
+                <img src="~/images/battistero-neoniano.png"/>
+                <p>Battistero Neoniano</p>
+            </div>
+            <div class="image-with-caption clickable battistero-degli-ariani" data-page="battistero-degli-ariani">
+                <img src="~/images/battistero-degli-ariani.png"/>
+                <p>Battistero degli Ariani</p>
+            </div>
+            <div class="image-with-caption clickable basilica-sant-apollinare-nuovo" data-page="basilica-sant-apollinare-nuovo">
+                <img src="~/images/basilica-sant-apollinare-nuovo.png"/>
+                <p>Basilica di Sant'Apollinare Nuovo</p>
+            </div>
+            <div class="image-with-caption clickable piazza-del-popolo" data-page="piazza-del-popolo">
+                <img src="~/images/piazza-del-popolo.png"/>
+                <p>Piazza del Popolo</p>
+            </div>
+            <div class="image-with-caption clickable tomba-di-dante" data-page="tomba-di-dante">
+                <img src="~/images/tomba-di-dante.png"/>
+                <p>Tomba di Dante</p>
+            </div>
+            <div class="image-with-caption clickable mausoleo-galla-placidia" data-page="mausoleo-galla-placidia">
+                <img src="~/images/mausoleo-galla-placidia.png"/>
+                <p>Mausoleao di Galla Placidia</p>
+            </div>
+
+        </div>
+
+        <div class="game-form">
+            <button class="clickable" data-close="true">Vai!</button>
+        </div>
+
+    </div>
+</div>

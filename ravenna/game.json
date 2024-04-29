@@ -1,0 +1,227 @@
+{
+    "id": "ravenna",
+    "stylesheet": ["~/style.css", "~/layout.css"],
+    "rules": [
+        {"trigger": "start", "effect": {"page": "introduction"}},
+        {"trigger": "submit:battistero-neoniano", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "cavaliere"}, 
+                "story": "generic-success",
+                "tag": "battistero-neoniano-success"
+            },
+            {
+                "condition": {"formvalue": "code", "equals": "cavallo"}, 
+                "story": "generic-success",
+                "tag": "battistero-neoniano-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:battistero-degli-ariani", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "18"}, 
+                "story": "generic-success",
+                "tag": "battistero-degli-ariani-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:basilica-san-vitale", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "108"}, 
+                "story": "generic-success",
+                "tag": "basilica-san-vitale-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:basilica-sant-apollinare-nuovo", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "111122233"}, 
+                "story": "generic-success",
+                "tag": "basilica-sant-apollinare-nuovo-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:basilica-san-francesco", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "11"}, 
+                "story": "generic-success",
+                "tag": "basilica-san-francesco-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:piazza-del-popolo", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "28"}, 
+                "story": "generic-success",
+                "tag": "piazza-del-popolo-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:tomba-di-dante", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "30"}, 
+                "story": "generic-success",
+                "tag": "tomba-di-dante-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:mausoleo-di-teodorico", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "810"}, 
+                "story": "generic-success",
+                "tag": "mausoleo-di-teodorico-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "submit:mausoleo-galla-placidia", "switch": [
+            {
+                "condition": {"formvalue": "code", "equals": "15"}, 
+                "story": "generic-success",
+                "tag": "mausoleo-galla-placidia-success"
+            },
+            {"story": "generic-failure"}
+        ]},
+        {"trigger": "visit:piazza-del-popolo", "effect": {"page": "piazza-del-popolo"}},
+        {"trigger": "visit:basilica-san-francesco", "effect": {"page": "basilica-san-francesco"}},
+        {"trigger": "visit:mausoleo-galla-placidia", "effect": {"page": "mausoleo-galla-placidia"}},
+        {"trigger": "visit:basilica-sant-apollinare-nuovo", "effect": {"page": "basilica-sant-apollinare-nuovo"}},
+        {"trigger": "visit:basilica-sant-apollinare-in-classe", "effect": {"page": "basilica-sant-apollinare-in-classe"}},
+        {"trigger": "visit:mausoleo-di-teodorico", "effect": {"page": "mausoleo-di-teodorico"}},
+        {"trigger": "visit:rocca-brancaleone", "effect": {"page": "rocca-brancaleone"}},
+        {"trigger": "visit:tomba-di-dante", "effect": {"page": "tomba-di-dante"}},
+        {"trigger": "visit:battistero-neoniano", "effect": {"page": "battistero-neoniano"}},
+        {"trigger": "visit:battistero-degli-ariani", "effect": {"page": "battistero-degli-ariani"}},
+        {"trigger": "visit:basilica-san-vitale", "effect": {"page": "basilica-san-vitale"}}
+    ],
+    "map": {"id": "map", "code": "map", 
+        "menu": "~/map-menu.html",
+        "icons": [
+            {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "gps", "url": "~/icons/gps.png", "size": [50,50], "anchor": [25, 43]}
+        ],
+        "features": [
+            {
+                "id": "basilica-san-vitale",
+                "nome": "Basilica di San Vitale", 
+                "icon": [
+                    {"condition": {"tag": "basilica-san-vitale-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.42058, 12.19631]
+            },
+            {
+                "id": "piazza-del-popolo",
+                "nome": "Piazza del popolo", 
+                "icon": [
+                    {"condition": {"tag": "piazza-del-popolo-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41778,12.19971]
+            },
+            {
+                "id": "mausoleo-galla-placidia",
+                "nome": "Mausoleo Galla Placidia", 
+                "icon": [
+                    {"condition": {"tag": "mausoleo-galla-placidia-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.42097, 12.19709]
+            },
+            {
+                "id": "basilica-sant-apollinare-nuovo",
+                "nome": "Basilica di Sant'Apollinare Nuovo", 
+                "icon": [
+                    {"condition": {"tag": "basilica-sant-apollinare-nuovo-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41674,12.20486]
+            },
+            {
+                "id": "basilica-san-francesco",
+                "nome": "Basilica di San Francesco", 
+                "icon": [
+                    {"condition": {"tag": "basilica-san-francesco-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41593,12.20115]
+            },
+            {
+                "id": "basilica-sant-apollinare-in-classe",
+                "condition": {"tag": "disabled-place"},
+                "nome": "Basilica di Sant'Apollinare in Classe", 
+                "icon": [
+                    {"condition": {"tag": "basilica-sant-apollinare-in-classe-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.38029,12.23302]
+            },
+            {
+                "id": "mausoleo-di-teodorico",
+                "condition": {"tag": "disabled-place"},
+                "nome": "Mausoleo di Teodorico", 
+                "icon": [
+                    {"condition": {"tag": "mausoleo-di-teodorico-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.42505,12.20914]
+            },
+            {
+                "id": "rocca-brancaleone",
+                "condition": {"tag": "disabled-place"},
+                "nome": "Rocca Brancaleone", 
+                "icon": [
+                    {"condition": {"tag": "rocca-brancaleone-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.42231,12.20588]
+            },
+            {
+                "id": "tomba-di-dante",
+                "nome": "Tomba di Dante Alighieri", 
+                "icon": [
+                    {"condition": {"tag": "tomba-di-dante-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41615, 12.20093]
+            },
+            {
+                "id": "battistero-neoniano",
+                "nome": "Battistero Neoniano", 
+                "icon": [
+                    {"condition": {"tag": "battistero-neoniano-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41560, 12.19735]
+            },
+            {
+                "id": "battistero-degli-ariani",
+                "nome": "Battistero degli Ariani", 
+                "icon": [
+                    {"condition": {"tag": "battistero-degli-ariani-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [44.41871, 12.20245]
+            }
+        ]
+    },
+    "pages": [
+        {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "piazza-del-popolo", "url": "~/piazza-del-popolo.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "basilica-san-francesco", "url": "~/basilica-san-francesco.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "basilica-sant-apollinare-in-classe", "url": "~/basilica-sant-apollinare-in-classe.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "basilica-sant-apollinare-nuovo", "url": "~/basilica-sant-apollinare-nuovo.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "battistero-degli-ariani", "url": "~/battistero-degli-ariani.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "battistero-neoniano", "url": "~/battistero-neoniano.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "mausoleo-di-teodorico", "url": "~/mausoleo-di-teodorico.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "mausoleo-galla-placidia", "url": "~/mausoleo-galla-placidia.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "rocca-brancaleone", "url": "~/rocca-brancaleone.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "tomba-di-dante", "url": "~/tomba-di-dante.html", "template": "~/tappa-di-gioco.html"},
+        {"id": "basilica-san-vitale", "url": "~/basilica-san-vitale.html", "template": "~/tappa-di-gioco.html"}
+    ],
+    "stories": [
+        {"id": "generic-success", "url": "~/success.html"},
+        {"id": "final-success", "url": "~/final-success.html"},
+        {"id": "special-success", "url": "~/special-success.html"},
+        {"id": "generic-failure", "url": "~/failure.html"}
+    ]
+}

@@ -1,0 +1,26 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Battistero Neoniano</h1>
+    <p id="">
+        Il Battistero Neoniano fu la risposta cattolica (del vescovo Neone) all’eresia Ariana, che proprio in Ravenna aveva avuto il massimo splendore sotto il regno di Teodorico.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>Sulla parete esterna, in alto, in una pietra bianca, quale animale è rappresento? Un ...?</p>
+        <div class="game-form">
+            <input id="code" name="code" type="text" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Basilica di San Vitale</h1>
+    <p id="">
+        Questo tempio a forma ottagonale (l’otto era simbolo di Resurrezione perché era sette, il tempo, più uno, Dio) è fra i monumenti più importanti dell’arte paleocristiana in Italia.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>All'ingresso contate il numero di barre verticali del cancello e moltiplicate per il numero di sfere di pietra che vedete. Quanto fa?</p>
+        <div class="game-form">
+            <input id="code" name="code" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>

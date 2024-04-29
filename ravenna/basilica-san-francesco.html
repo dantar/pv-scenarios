@@ -1,0 +1,26 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Basilica di San Francesco</h1>
+    <p id="">
+        I Francescani del convento trafugarono e conservarono gelosamente le ossa di Dante per diversi secoli, opponendosi alla volontà di sovrani e papi di riportare le spoglie a Firenze.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>Quante finestre conta la facciata della Basilica di San Francesco, se si contano anche quelle della torre?</p>
+        <div class="game-form">
+            <input id="code" name="code" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>

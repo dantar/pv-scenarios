@@ -1,0 +1,36 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Mausoleo di Teodorico</h1>
+    <p>
+        Il monumento fu fatto costruire per volontà di Teodorico come propria sepoltura intorno al 520 d.C.
+    </p>
+    <p>
+        La straordinaria copertura non ha eguali nel patrimonio architettonico antico e moderno.
+        Si tratta di un unico blocco di oltre 290 tonnellate tornito a forma di cupola ribassata, coronata da dodici anse, sulle quali sono iscritti i nomi di otto Apostoli e dei quattro Evangelisti; tali anse sono state certamente funzionali per tutte le operazioni di estrazione, trasporto, sollevamento e posizionamento del monolite. Sulla cupola si apre una grande fenditura che potrebbe aver avuto origine proprio durante i difficili lavori di messa in opera.
+    </p>
+    <p>
+        Secondo una leggenda popolare, la cupola sarebbe stata invece squarciata dalla folgore divina che, abbattendosi su Teodorico seduto all’interno, lo avrebbe ucciso come punizione per i suoi delitti. La grande cupola monolitica, che richiama la volta celeste, funge da protezione materiale e simbolica per il sepolcro del grande re.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>
+            Percorrete il ponte per raggiungere il primo piano del mausoleo. 
+            La forma della finestra vi suggerirà che fare dei due numeri forniti nella descrizione qui su, l'anno e le tonnellate.
+        </p>
+        <div class="game-form">
+            <input id="code" name="code" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>
+        Tomba di Dante
+    </h1>
+    <p id="">
+        La  cosiddetta “zucarira” (la zuccheriera in dialetto locale) come viene scherzosamente chiamata dai ravennati la Tomba di Dante, si trova nella “Zona del silenzio“, un luogo di pace e tranquillità dove far riposare Dante.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>Di quante lettere è composta la scritta sull'ingresso se le vocali AEIOV contano per due?</p>
+        <div class="game-form">
+            <input id="code" name="code" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>

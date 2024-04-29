@@ -1,0 +1,26 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Mausoleo Galla Placidia</h1>
+    <p id="">
+        La sua identificazione funzionale con un edificio funebre e quella della sua committente, l'imperatrice Galla Placidia, sono ampiamente diffuse in ambiente accademico, ma non vi è certezza di nessuna delle due: l'edificio potrebbe essere stato una semplice cappella pertinente alla chiesa di Santa Croce.
+    </p>
+    <div class="image-with-caption">
+        <img src="~/images/{{id}}.png"/>
+    </div>
+
+    <div class="if-to-be-done">
+        <p>Dalla strada che passa accanto al mausoleo, via galla placidia, quanti archi di mattoni rossi si vedono sulle pareti del mausoleo?</p>
+        <div class="game-form">
+            <input id="code" name="code" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="{{id}}:#code">Vai!</button>
+        </div>
+    </div>
+
+    <div class="if-success">
+        <div class="image-with-caption">
+            <img src="~/images/success.png"/>
+            <p>Hai già passato questo gioco!</p>
+        </div>
+    </div>
+
+</div>
