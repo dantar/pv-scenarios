@@ -1,0 +1,53 @@
+<div class="template-replace" data-selector="#tappa-main">
+
+    <h1>Casa</h1>
+    <div class="image-with-caption">
+        <img src="~/images/__id__.png"/>
+    </div>
+
+    <p>
+        Prova lo <span class="clickable" data-scanner="scanner">scanner</span>.
+    </p>
+
+    <style>
+
+        .if-clipboard-enabled {
+            display: none;
+        }
+        .if-webshare-enabled {
+            display: none;
+        }
+        .clipboard-enabled .if-clipboard-enabled {
+            display: initial;
+        }
+        .webshare-enabled .if-webshare-enabled {
+            display: initial;
+        }
+
+        #webshare-snapshot {
+            background-color: white;
+            padding: 5px;
+            border: 1px solid gray;
+        }
+    </style>
+
+    <div id="webshare-snapshot">
+        <p>Questo dovrebbe essere un web share item</p>
+        <div class="image-with-caption">
+            <img src="~/images/__id__.png" crossorigin="anonymous" />
+        </div>
+    </div>
+
+    <p class="if-webshare-enabled">
+        Prova il <span class="clickable" 
+            data-webshare-url="__uri__" 
+            data-webshare-text="Testo della __id__" 
+            data-webshare-snapshot="#webshare-snapshot"
+            >webshare snapshot</span>.
+    </p>
+
+    <p class="if-clipboard-enabled">
+        Prova il <span class="clickable" data-copy-snapshot="#webshare-snapshot">copy to clipboard</span>.
+    </p>
+
+</div>

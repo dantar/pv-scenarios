@@ -1,0 +1,156 @@
+.percorso-tappe {
+    border-left: 5px dashed gray;
+    margin-left: 25px;
+}
+
+.percorso-tappa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -25px;
+    margin-bottom: 25px;
+}
+
+.pagina-tappa {
+    background-color: #000000aa;
+}
+.pagina-tappa h1,
+.pagina-tappa h2,
+.pagina-tappa h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.pagina-percorso {
+    background-color: #000000aa;
+}
+.pagina-percorso h1,
+.pagina-percorso h2,
+.pagina-percorso h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.text-page {
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 3px solid lightgray;
+}
+
+@media screen and (orientation:portrait) {
+    .text-page {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .text-page {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+/* Buttons */
+
+.window-buttons {
+    position: relative;
+    float: right;
+    display: flex;
+    margin-top: -40px;
+}
+
+.window-buttons img {
+    width: 40px;
+}
+
+.side-buttons {
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: -20px;
+}
+
+.crumbs-buttons-tappa .crumbs-button {
+    display: none;
+}
+.crumbs-buttons-tappa.tappa-id-porta-del-popolo .crumbs-button.crumbs-button-percorso1 ,
+.crumbs-buttons-tappa .crumbs-button.crumbs-button-home
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 2em;
+    align-items: center;
+}
+
+/* Text */
+
+.image-with-caption {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-with-caption img {
+    max-width: 90%;
+}
+
+/* Tabs */
+
+.tab-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tab-header {
+    background-color: white;
+    font-size: 1.6em;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid gray;
+    font-family: monospace;
+    border-radius: 6px;
+}
+.setting-tab-tappa-descrizione .tab-header.tab-header-descrizione ,
+.setting-tab-tappa-storia .tab-header.tab-header-storia ,
+.setting-tab-tappa-preghiera .tab-header.tab-header-preghiera ,
+.setting-tab-tappa-meditazione .tab-header.tab-header-meditazione ,
+.setting-tab-tappa-avanti .tab-header.tab-header-avanti ,
+.setting-tab-tappa-pratiche .tab-header.tab-header-pratiche {
+    background-color: gray;
+    color: white;
+}
+.setting-tab-percorso-descrizione .tab-header.tab-header-percorso-descrizione ,
+.setting-tab-percorso-tappe .tab-header.tab-header-percorso-tappe ,
+.setting-tab-percorso-info .tab-header.tab-header-percorso-info {
+    background-color: gray;
+    color: white;
+}
+
+.tab-tappa {
+    display: none;
+}
+.setting-tab-tappa-descrizione .tab-tappa.tab-tappa-descrizione ,
+.setting-tab-tappa-preghiera .tab-tappa.tab-tappa-preghiera ,
+.setting-tab-tappa-storia .tab-tappa.tab-tappa-storia ,
+.setting-tab-tappa-meditazione .tab-tappa.tab-tappa-meditazione ,
+.setting-tab-tappa-avanti .tab-tappa.tab-tappa-avanti ,
+.setting-tab-tappa-pratiche .tab-tappa.tab-tappa-pratiche {
+    display: initial;
+}
+
+.tab-percorso {
+    display: none;
+}
+.setting-tab-percorso-descrizione .tab-percorso.tab-percorso-descrizione,
+.setting-tab-percorso-tappe .tab-percorso.tab-percorso-tappe,
+.setting-tab-percorso-info .tab-percorso.tab-percorso-info {
+    display: initial;
+}

@@ -1,0 +1,41 @@
+{
+    "id": "sogno",
+    "stylesheet": ["~/style.css"],
+    "rules": [
+        {"trigger": "start", "effect": {"page": "introduction"}},
+        {"trigger": "qrcode:1111MU24042614274701", "effect": {"story": "generic-success"}},
+        {"trigger": "visit:casa", "effect": {"page": "casa"}}
+    ],
+    "map": {"id": "map", "code": "map", 
+        "menu": "~/map-menu.html",
+        "icons": [
+            {"id": "default", "url": "~/icons/placeholder.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "place-done", "url": "~/icons/place-done.png", "size": [50,50], "anchor": [25, 43]},
+            {"id": "gps", "url": "~/icons/gps.png", "size": [50,50], "anchor": [25, 43]}
+        ],
+        "features": [
+            {
+                "id": "casa",
+                "nome": "Casa", 
+                "icon": [
+                    {"condition": {"tag": "casa-success"}, "icon": "place-done"},
+                    {"icon": "default"}
+                ],
+                "pos": [43.72252,10.37678]
+            }
+        ]
+    },
+    "pages": [
+        {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "casa", "url": "~/casa.html", "template": "~/tappa-di-gioco.html"}
+    ],
+    "scanners": [
+        {"id": "scanner", "url": "~/scanner.html"}
+    ],
+    "stories": [
+        {"id": "generic-success", "url": "~/success.html"},
+        {"id": "final-success", "url": "~/final-success.html"},
+        {"id": "special-success", "url": "~/special-success.html"},
+        {"id": "generic-failure", "url": "~/failure.html"}
+    ]
+}
