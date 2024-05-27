@@ -1,0 +1,141 @@
+<style>
+
+    .if-clipboard-enabled {
+        display: none;
+    }
+    .if-webshare-enabled {
+        display: none;
+    }
+    .clipboard-enabled .if-clipboard-enabled {
+        display: initial;
+    }
+    .webshare-enabled .if-webshare-enabled {
+        display: initial;
+    }
+
+    .badges-display {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    #webshare-snapshot {
+        background-color: white;
+        border: 1px solid gray;
+        padding: 5px;
+        max-width: 300px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .badge {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+    }
+
+    .badge img {
+        max-width: 120px;
+        opacity: 0.15;
+    }
+    
+    .tag-old-settlers-cemetery-success .badge-old-settlers-cemetery img,
+    .tag-president-polk-success .badge-president-polk img,
+    .tag-freedom-park-locomotive-success .badge-freedom-park-locomotive img,
+    .tag-greenway-bridge-success .badge-greenway-bridge img,
+    .tag-the-writers-desk-success .badge-the-writers-desk img,
+    .tag-home-sweet-home-success .badge-home-sweet-home img
+    {
+        opacity: 1;
+    }
+
+    .badge p {
+        margin: 0;
+    }
+    .badge p:before {
+        content: "❌ ";
+    }
+    .tag-old-settlers-cemetery-success .badge-old-settlers-cemetery p:before,
+    .tag-president-polk-success .badge-president-polk p:before,
+    .tag-freedom-park-locomotive-success .badge-freedom-park-locomotive p:before,
+    .tag-greenway-bridge-success .badge-greenway-bridge p:before,
+    .tag-the-writers-desk-success .badge-the-writers-desk p:before,
+    .tag-home-sweet-home-success .badge-home-sweet-home p:before
+    {
+        content: "✅ ";
+    }
+
+    .home-sweet-home-is-available {
+        display: none;
+    }
+    .tag-old-settlers-cemetery-success.tag-president-polk-success.tag-freedom-park-locomotive-success.tag-greenway-bridge-success.tag-the-writers-desk-success .home-sweet-home-not-available {
+        display: none;
+    }
+    .tag-old-settlers-cemetery-success.tag-president-polk-success.tag-freedom-park-locomotive-success.tag-greenway-bridge-success.tag-the-writers-desk-success .home-sweet-home-is-available {
+        display: initial;
+    }
+
+</style>
+<div class="story fullpage">
+    <div class="text-page">
+        <div class="window-buttons">
+            <div class="menu-button clickable" data-close="true"><img src="~/icons/close.png" /></div>
+        </div>
+
+        <h1>Your progress</h1>
+
+        <p>
+            Celebrate your success!
+            Here is your scoreboard, reporting all the progress you've done so far.
+            Share it with friends!
+        </p>
+
+        <div class="badges-display">
+            <div id="webshare-snapshot">
+                <div class="badge badge-old-settlers-cemetery clickable" data-page="old-settlers-cemetery">
+                    <p>Old Settler's Cemetery</p>
+                    <img src="~/images/old-settlers-cemetery.png"/>
+                </div>
+                <div class="badge badge-the-writers-desk clickable" data-page="the-writers-desk">
+                    <p>The Writer's Desk</p>
+                    <img src="~/images/the-writers-desk.png"/>
+                </div>
+                <div class="badge badge-freedom-park-locomotive clickable" data-page="freedom-park-locomotive">
+                    <p class="clickable" data-page="freedom-park-locomotive">Freedom Park</p>
+                    <img src="~/images/freedom-park-locomotive.png"/>
+                </div>
+                <div class="badge badge-president-polk clickable" data-page="president-polk">
+                    <p class="clickable" data-page="president-polk">President Polk's Site</p>
+                    <img src="~/images/president-polk.png"/>
+                </div>
+                <div class="badge badge-greenway-bridge clickable" data-page="greenway-bridge">
+                    <p class="clickable" data-page="greenway-bridge">Little Sugar Creek</p>
+                    <img src="~/images/greenway-bridge.png"/>
+                </div>
+                <div class="home-sweet-home-not-available">
+                    <div class="badge badge-home-sweet-home">
+                        <p>???</p>
+                        <img src="~/images/home-sweet-home.png"/>
+                    </div>
+                </div>
+                <div class="home-sweet-home-is-available">
+                    <div class="badge badge-home-sweet-home clickable" data-page="home-sweet-home">
+                        <p>Home Sweet Home</p>
+                        <img src="~/images/home-sweet-home.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-form">
+            <button class="clickable if-webshare-enabled" data-webshare-snapshot="#webshare-snapshot">Share!</button>
+            <button class="clickable if-clipboard-enabled" data-copy-snapshot="#webshare-snapshot">Copy!</button>
+        </div>
+
+    </div>
+</div>

@@ -153,6 +153,7 @@
     },
     "pages": [
         {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "badges", "url": "~/badges.html"},
         {"id": "old-settlers-cemetery", "url": "~/old-settlers-cemetery.html"},
         {"id": "home-sweet-home", "url": "~/home-sweet-home.html"},
         {"id": "president-polk", "url": "~/president-polk.html"},
