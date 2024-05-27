@@ -10,10 +10,12 @@ SCRIPTDIR=`pwd`
 MAINDIR=`dirname $SCRIPTDIR`
 cd -
 
+GAME=pineville
+
 DEST=atlante.elabor.biz:dist/
 DEST=dantar:html/
 die() { echo "$*" 1>&2 ; exit 1; }
-while getopts h: flag;
+while getopts h:g: flag;
 do
     echo "FLAG ${flag}"
     case "${flag}" in
@@ -29,9 +31,16 @@ do
                 *) die "opzione invalida: ${OPTARG}";;
             esac
         ;;
+        g) GAME=${OPTARG}
+        if [ -d $MAINDIR/$GAME ]; then
+            echo "Game: ${GAME}"
+        else
+            die "ERROR: Game ${GAME} does not exist!"
+        fi
+        ;;
         *) die "opzione invalida: ${flag}";;
     esac
 done
 
 cd $MAINDIR
-rsync --delete -varzh $MAINDIR/pineville $DEST
+rsync --delete -varzh $MAINDIR/$GAME $DEST
