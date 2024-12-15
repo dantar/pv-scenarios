@@ -1,0 +1,23 @@
+.se-hai {
+    display: none;
+}
+.tag-hai-fuoco .se-hai.hai-fuoco {
+    display: initial;
+}
+.tag-hai-fuoco .non-hai.hai-fuoco {
+    display: none;
+}
+
+.dai-cosa {
+    display: none;
+}
+.setting-dai-fuoco .dai-cosa.dai-fuoco {
+    display: initial;
+}
+
+.dai-a-chi {
+    display: none;
+}
+.setting-dai-a-tizio .dai-a-chi.dai-a-tizio {
+    display: initial;
+}

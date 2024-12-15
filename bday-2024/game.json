@@ -1,0 +1,36 @@
+{
+    "id": "bday-2024",
+    "stylesheet": ["~/style.css", "~/oggetti.css"],
+    "desktop": "desktop",
+    "rules": [
+        {"trigger": "action:hai-fuoco", "effect": {"tag": "hai-fuoco", "story": "mostra-fuoco"}},
+        {"trigger": "qrcode:fuoco_{{chi-sei}}", "effect": {"tag": "hai-fuoco", "story": "mostra-fuoco"}},
+        {"trigger": "action:usa-fuoco", "effect": {"untag": "hai-fuoco", "story": "usa-fuoco"}},
+        {"trigger": "action:dai-fuoco", "effect": {"settings": {"cosa-dai": "fuoco"}}},
+        {"trigger": "action:dato-fuoco", "effect": {"untag": "hai-fuoco"}},
+        {"trigger": "qrcode:tizio", "switch": [
+            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "tizio"}, "page": "welcome"},
+            {"settings": {"dai-a-chi": "tizio"}, "story": "dai-a", "untag": "hai-{{cosa-dai}}"}
+        ]},
+        {"trigger": "qrcode:caio", "switch": [
+            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "caio"}, "page": "welcome"},
+            {"settings": {"dai-a-chi": "caio"}, "story": "dai-a", "untag": "hai-{{cosa-dai}}"}
+        ]},
+        {"trigger": "start", "effect": {"page": "introduction"}}
+    ],
+    "pages": [
+        {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "welcome", "url": "~/welcome.html"},
+        {"id": "fonte-fuoco", "url": "~/fonte-fuoco.html"},
+        {"id": "desktop", "url": "~/desktop.html"}
+    ],
+    "scanners": [
+        {"id": "scanner", "url": "~/scanner.html"},
+        {"id": "dai-oggetto", "url": "~/dai-oggetto.html"}
+    ],
+    "stories": [
+        {"id": "dai-a", "url": "~/dai-a.html", "template": "~/story-template.html"},
+        {"id": "mostra-fuoco", "url": "~/mostra-fuoco.html", "template": "~/story-template.html"},
+        {"id": "usa-fuoco", "url": "~/usa-fuoco.html", "template": "~/story-template.html"}
+    ]
+}
