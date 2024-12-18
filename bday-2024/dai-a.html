@@ -1,10 +1,11 @@
 <div class="template-replace" data-selector="#story-content">
-    <h1>Prendi!</h1>
+    <h1>Dai {{cosa-dai}} a {{dai-a-chi}}</h1>
+    <p>{{dai-a-chi}} può utilizzare il codice seguente per ottenere {{cosa-dai}}</p>
     <div class="image-with-caption">
-        <img src="~/qrcodes/{{cosa-dai}}_{{dai-a-chi}}.png" />
-        <div class="caption">{{cosa-dai}}_{{dai-a-chi}}</div>
+        <img src="~/qrcodes/dai_{{cosa-dai}}_{{dai-a-chi}}.png" />
+        <div class="caption">dai_{{cosa-dai}}_{{dai-a-chi}}</div>
     </div>
     <div>
-        <button class="clickable" data-close="true" data-action="oggetto-dato">Fatto</button>
+        <button class="clickable" data-close="true">Fatto</button>
     </div>
 </div>

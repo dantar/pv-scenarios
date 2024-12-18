@@ -1,0 +1,24 @@
+<div class="template-replace" data-selector="#story-content">
+    <style>
+        .hai-combo {
+            display: none;
+        }
+        .tag-hai-__combo1__.tag-hai-__combo2__ .hai-combo{
+            display: initial;
+        }
+    </style>
+    <h1>Combo {{combo1}} {{combo2}}</h1>
+    <div>
+        dovresti riuscire a combinare {{combo1}} e {{combo2}}
+    </div>
+
+    <div class="se-hai hai-{{combo1}}">Hai {{combo1}}</div>
+    <div class="non-hai hai-{{combo1}}">Ti manca {{combo1}}</div>
+    <div class="se-hai hai-{{combo2}}">Hai {{combo2}}</div>
+    <div class="non-hai hai-{{combo2}}">Ti manca {{combo2}}</div>
+
+    <div class="hai-combo">
+        Ma sì! Hai sia {{combo1}} che {{combo2}}!
+        <button class="clickable" data-action="combo-{{combo1}}-{{combo2}}">combina</button>
+    </div>    
+</div>

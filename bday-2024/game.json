@@ -1,25 +1,39 @@
 {
     "id": "bday-2024",
-    "stylesheet": ["~/style.css", "~/oggetti.css"],
+    "stylesheet": ["~/style.css", "~/oggetti.css", "~/icone-css.html"],
     "desktop": "desktop",
     "rules": [
-        {"trigger": "action:hai-fuoco", "effect": {"tag": "hai-fuoco", "story": "mostra-fuoco"}},
-        {"trigger": "qrcode:fuoco_{{chi-sei}}", "effect": {"tag": "hai-fuoco", "story": "mostra-fuoco"}},
-        {"trigger": "action:usa-fuoco", "effect": {"untag": "hai-fuoco", "story": "usa-fuoco"}},
-        {"trigger": "action:dai-fuoco", "effect": {"settings": {"cosa-dai": "fuoco"}}},
-        {"trigger": "action:dato-fuoco", "effect": {"untag": "hai-fuoco"}},
-        {"trigger": "qrcode:tizio", "switch": [
-            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "tizio"}, "page": "welcome"},
-            {"settings": {"dai-a-chi": "tizio"}, "story": "dai-a", "untag": "hai-{{cosa-dai}}"}
+        {"effect": {"clipboard": {"regex": "fonte-(?<something>.*)"} }},
+        {"effect": {"clipboard": {"regex": "hai-(?<something>.*)"} }},
+        {"effect": {"clipboard": {"regex": "usa-(?<something>.*)"} }},
+        {"effect": {"clipboard": {"regex": "chi-(?<someone>.*)"} }},
+        {"effect": {"clipboard": {"regex": "(?<something>.*)_(?<someone>.*)"} }},
+        {"trigger": "action:hai-{{something}}", "effect": {"tag": "hai-{{something}}", "story": "mostra-{{something}}"}},
+        {"trigger": "action:usa-{{something}}", "effect": {"untag": "hai-{{something}}", "story": "usa-{{something}}"}},
+        {"trigger": "action:dai-{{something}}", "effect": {"settings": {"cosa-dai": "{{something}}"}, "tag": "dai-{{something}}"}},
+        {"trigger": "qrcode:dai_{{something}}_{{chi-sei}}", "effect": {"tag": "hai-{{something}}", "story": "mostra-{{something}}"}},
+        {"trigger": "qrcode:fonte-{{something}}", "switch": [
+            {"condition": {"noTag": "accesso-{{something}}"}, "story": "non-hai-accesso"},
+            {"condition": {"tag": "hai-{{something}}"}, "story": "mostra-{{something}}"}
         ]},
-        {"trigger": "qrcode:caio", "switch": [
-            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "caio"}, "page": "welcome"},
-            {"settings": {"dai-a-chi": "caio"}, "story": "dai-a", "untag": "hai-{{cosa-dai}}"}
+        {"trigger": "action:dato-{{something}}", "effect": {"untag": "hai-{{something}}"}},
+        {"trigger": "qrcode:chi-{{someone}}", "switch": [
+            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "{{someone}}"}, "page": "welcome"},
+            {"condition": {"setting": "chi-sei", "equals": "{{someone}}"}, "page": "welcome"},
+            {"condition": {"tag": "dai-qualcosa"}, "settings": {"dai-a-chi": "{{someone}}"}, "story": "dai-a", "untag": ["dai-qualcosa", "hai-{{cosa-dai}}"]},
+            {"story": "chi-{{someone}}"}
         ]},
+        {"trigger": "qrcode:combo-fuoco-acqua", "effect": {"story": "combo-fuoco-acqua"}},
+        {"trigger": "qrcode:combo-fuoco-terra", "effect": {"story": "combo-fuoco-terra"}},
+        {"trigger": "qrcode:combo-fuoco-aria", "effect": {"story": "combo-fuoco-aria"}},
+        {"trigger": "qrcode:combo-acqua-terra", "effect": {"story": "combo-acqua-terra"}},
+        {"trigger": "qrcode:combo-acqua-aria", "effect": {"story": "combo-acqua-aria"}},
+        {"trigger": "qrcode:combo-terra-aria", "effect": {"story": "combo-terra-aria"}},
         {"trigger": "start", "effect": {"page": "introduction"}}
     ],
     "pages": [
         {"id": "introduction", "url": "~/introduction.html"},
+        {"id": "inventario", "url": "~/inventario.html"},
         {"id": "welcome", "url": "~/welcome.html"},
         {"id": "fonte-fuoco", "url": "~/fonte-fuoco.html"},
         {"id": "desktop", "url": "~/desktop.html"}
@@ -30,7 +44,18 @@
     ],
     "stories": [
         {"id": "dai-a", "url": "~/dai-a.html", "template": "~/story-template.html"},
-        {"id": "mostra-fuoco", "url": "~/mostra-fuoco.html", "template": "~/story-template.html"},
-        {"id": "usa-fuoco", "url": "~/usa-fuoco.html", "template": "~/story-template.html"}
+        {"id": "chi-tizio", "url": "~/chi-tizio.html", "template": "~/story-template.html"},
+        {"id": "mostra-fuoco", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "fuoco"}},
+        {"id": "mostra-terra", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "terra"}},
+        {"id": "mostra-aria", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "aria"}},
+        {"id": "mostra-acqua", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "acqua"}},
+        {"id": "task-codice", "url": "~/task-codice.html", "template": "~/story-template.html"},
+        {"id": "combo-fuoco-acqua", "url": "~/mostra-combo.html", "template": "~/story-template.html", "data": {"combo1": "fuoco", "combo2": "acqua"}},
+        {"id": "combo-fuoco-terra", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "fuoco", "combo2": "terra"}},
+        {"id": "combo-fuoco-aria", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "fuoco", "combo2": "aria"}},
+        {"id": "combo-acqua-terra", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "acqua", "combo2": "terra"}},
+        {"id": "combo-acqua-aria", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "acqua", "combo2": "aria"}},
+        {"id": "combo-terra-aria", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "terra", "combo2": "aria"}},
+        {"id": "cheat", "url": "~/cheat.html", "template": "~/story-template.html"}
     ]
 }

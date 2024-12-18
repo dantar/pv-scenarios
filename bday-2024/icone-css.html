@@ -1,0 +1,63 @@
+<style>
+    .icon-fuoco::before {
+        background-image: url('~/icons/fuoco.png'); /* Replace with the actual path to your PNG file */
+    }
+    .icon-caption.icon-fuoco::after {
+        content: "Fuoco";
+    }
+
+    .icon-aria::before {
+        background-image: url('~/icons/aria.png'); /* Replace with the actual path to your PNG file */
+    }
+    .icon-caption.icon-aria::after {
+        content: "Aria";
+    }
+
+    .icon-acqua::before {
+        background-image: url('~/icons/acqua.png'); /* Replace with the actual path to your PNG file */
+    }
+    .icon-caption.icon-acqua::after {
+        content: "Acqua";
+    }
+
+    .icon-terra::before {
+        background-image: url('~/icons/terra.png'); /* Replace with the actual path to your PNG file */
+    }
+    .icon-caption.icon-terra::after {
+        content: "Terra";
+    }
+
+    
+    
+    h1.icon {
+        width: 200px; /* Set the width of the icon */
+        height: 200px; /* Set the height of the icon */
+    }
+    span.icon {
+        width: 1.5em; /* Set the width of the icon */
+        height: 1.5em; /* Set the height of the icon */
+    }
+    div.icon {
+        width: 24px; /* Set the width of the icon */
+        height: 24px; /* Set the height of the icon */
+    }
+
+    .icon {
+        display: inline-block;
+        background-size: cover; /* Ensure the image covers the entire element */
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+    
+    .icon::before {
+        content: '';
+        display: block;
+        width: 100%; /* Match the parent width */
+        height: 100%; /* Match the parent height */
+        background-size: contain; /* Ensure the image fits within the element */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+  
