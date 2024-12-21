@@ -71,3 +71,13 @@
 .setting-dai-maze .dai-cosa.dai-maze {
     display: initial;
 }
+
+.tag-hai-cages .se-hai.hai-cages {
+    display: initial;
+}
+.tag-hai-cages .non-hai.hai-cages {
+    display: none;
+}
+.setting-dai-cages .dai-cosa.dai-cages {
+    display: initial;
+}
