@@ -1,0 +1,52 @@
+<div class="template-replace" data-selector="#story-content">
+    <h1>Labirinto</h1>
+
+    <style>
+        .task-success {
+            display: none;
+        }
+        .tag-task-maze-success .task-success {
+            display: initial;
+        }
+        .tag-task-maze-success .task-todo {
+            display: none;
+        }
+    </style>
+
+    <div class="task-todo">
+        <div>
+            C'è una sola strada che permette di raggiungere il centro del labirinto. 
+            Sapresti dire quale codice a quattro cifre viene rivelato dal percorso?
+        </div>
+        <div class="non-hai hai-talismano">
+            <p>Forse per capire i segni del labirinto ti servirà il famoso Talismano dei Labirinti custodito dal Signore dell'Albero.</p>
+            <div class="image-with-caption">
+                <img src="~/images/hint-lance.png"/>
+            </div>
+        </div>
+        <div class="se-hai hai-talismano">
+            <p>Hai con te il talismano dei labirinti, puoi consultarlo, se vuoi.</p>
+            <h2 class="icon icon-talismano clickable" data-story="mostra-talismano"></h2>
+        </div>
+    
+        <div class="game-form">
+            <input class="forminput" name="correct" type="hidden" value="6529" />
+            <input class="forminput" name="codice" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="task-maze:.forminput">OK</button>
+        </div>
+    </div>
+
+    <div class="task-success">
+        <p>Al centro del Labirinto si trova il suo Globo:</p>
+        <div class="se-hai hai-globo">
+            <div class="image-with-caption">
+                <img src="~/images/globo.png"/>
+            </div>
+        </div>
+        <div class="non-hai hai-globo">
+            <div class="image-with-caption clickable" data-action="hai-globo">
+                <img src="~/images/globo.png"/>
+            </div>
+        </div>
+    </div>
+</div>

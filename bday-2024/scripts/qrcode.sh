@@ -11,10 +11,6 @@ SCRIPTDIR=`pwd`
 cd -
 echo $SCRIPTDIR
 
-elements="fuoco acqua terra aria"
+CODE=$1
+qrencode -o $SCRIPTDIR/../resources/qrcodes/$CODE.png https://dantar.it/ponte-virtuale/#/play/bday-2024/$CODE
 
-for PACKAGE in $PACKAGES
-do
-    docker pull docker-registry.hyperborea.com/stimare/$PACKAGE:$VERSION
-    docker save docker-registry.hyperborea.com/stimare/$PACKAGE:$VERSION | gzip > $PACKAGE.$VERSION.tgz
-done

@@ -1,0 +1,81 @@
+<div class="template-replace" data-selector="#story-content">
+    <h1>Signore dell'Albero</h1>
+    <style>
+
+        .speso-fuoco-lance {
+            display: none;
+        }
+        .tag-speso-fuoco-lance .speso-fuoco-lance {
+            display: initial;
+        }
+        .tag-speso-fuoco-lance .nonspeso-fuoco-lance {
+            display: none;
+        }
+
+        .speso-acqua-lance {
+            display: none;
+        }
+        .tag-speso-acqua-lance .speso-acqua-lance {
+            display: initial;
+        }
+        .tag-speso-acqua-lance .nonspeso-acqua-lance {
+            display: none;
+        }
+
+        .scambio-concluso {
+            display: none;
+        }
+        .tag-speso-fuoco-lance.tag-speso-acqua-lance .scambio-concluso {
+            display: initial;
+        }
+    </style>
+    <div class="non-hai hai-talismano">
+        <p>
+            Il Signore dell'Albero possiede un prezioso artefatto: il Talismano del Labirinto.
+        </p>
+        <p>
+            Sarebbe disposto a darlo, in cambio di <span class="icon icon-acqua"></span> e <span class="icon icon-fuoco"></span>
+        </p>
+
+        <div class="nonspeso-fuoco-lance">
+            <p class="se-hai hai-fuoco">
+                Hai <span class="icon icon-fuoco"></span>. 
+                Se vuoi glielo <button class="clickable" data-action="spendi-fuoco-lance">puoi dare</button>.
+            </p>
+            <p class="non-hai hai-fuoco">
+                Non hai <span class="icon icon-fuoco"></span> da dare. 
+            </p>
+        </div>
+        <div class="speso-fuoco-lance">
+            Hai già dato <span class="icon icon-fuoco"></span> al Signore dell'Albero. 
+        </div>
+
+        <div class="nonspeso-acqua-lance">
+            <p class="se-hai hai-acqua">
+                Hai <span class="icon icon-acqua"></span>. 
+                Se vuoi glielo <button class="clickable" data-action="spendi-acqua-lance">puoi dare</button>.
+            </p>
+            <p class="non-hai hai-acqua">
+                Non hai <span class="icon icon-acqua"></span> da dare. 
+            </p>
+        </div>
+        <div class="speso-acqua-lance">
+            Hai già dato <span class="icon icon-acqua"></span> al Signore dell'Albero. 
+        </div>
+
+        <div class="scambio-concluso">
+            <p>Il Signore dell'Albero è molto contento dello scambio. Puoi prendere il suo Talismano del Labirinto:</p>
+            <div class="image-with-caption">
+                <img src="~/images/talismano.png" class="clickable" data-action="scambio2a1-lance-fuoco-acqua-talismano" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="se-hai hai-talismano">
+        <p>Il Signore dell'Albero è molto contento di averti dato il suo Talismano del Labirinto:</p>
+        <div class="image-with-caption">
+            <img src="~/images/talismano.png"/>
+        </div>
+    </div>
+</div>

@@ -51,3 +51,23 @@
 .setting-dai-aria .dai-cosa.dai-aria {
     display: initial;
 }
+
+.tag-hai-talismano .se-hai.hai-talismano {
+    display: initial;
+}
+.tag-hai-talismano .non-hai.hai-talismano {
+    display: none;
+}
+.setting-dai-talismano .dai-cosa.dai-talismano {
+    display: initial;
+}
+
+.tag-hai-globo .se-hai.hai-globo {
+    display: initial;
+}
+.tag-hai-globo .non-hai.hai-globo {
+    display: none;
+}
+.setting-dai-globo .dai-cosa.dai-globo {
+    display: initial;
+}

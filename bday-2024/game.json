@@ -3,11 +3,20 @@
     "stylesheet": ["~/style.css", "~/oggetti.css", "~/icone-css.html"],
     "desktop": "desktop",
     "rules": [
+        {"effect": {"clipboard": {"regex": "prendi-(?<something>.*)"} }},
+        {"effect": {"clipboard": {"regex": "spendi-(?<something>.*)-(?<forwhat>.*)"} }},
+        {"effect": {"clipboard": {"regex": "scambio2a1-(?<forwhat>.*)-(?<somethingA>.*)-(?<somethingB>.*)-(?<somethingC>.*)"} }},
         {"effect": {"clipboard": {"regex": "fonte-(?<something>.*)"} }},
         {"effect": {"clipboard": {"regex": "hai-(?<something>.*)"} }},
         {"effect": {"clipboard": {"regex": "usa-(?<something>.*)"} }},
-        {"effect": {"clipboard": {"regex": "chi-(?<someone>.*)"} }},
-        {"effect": {"clipboard": {"regex": "(?<something>.*)_(?<someone>.*)"} }},
+        {"effect": {"clipboard": {"regex": "chi-(?<elementoA>.*)-(?<elementoB>.*)"} }},
+        {"effect": {"clipboard": {"regex": "task-(?<challenge>.*)"} }},
+        {"effect": {"clipboard": {"regex": "(?<something>.*)_(?<elementoA>.*)-(?<elementoB>.*)"} }},
+        {"trigger": "action:spendi-{{something}}-{{forwhat}}", "effect": {"untag": "hai-{{something}}", "tag": "speso-{{something}}-{{forwhat}}"}},
+        {"trigger": "action:scambio2a1-{{forwhat}}-{{somethingA}}-{{somethingB}}-{{somethingC}}", "effect": {
+            "untag": ["speso-{{somethingA}}-{{forwhat}}", "speso-{{somethingB}}-{{forwhat}}"], 
+            "tag": "hai-{{somethingC}}"
+            }},
         {"trigger": "action:hai-{{something}}", "effect": {"tag": "hai-{{something}}", "story": "mostra-{{something}}"}},
         {"trigger": "action:usa-{{something}}", "effect": {"untag": "hai-{{something}}", "story": "usa-{{something}}"}},
         {"trigger": "action:dai-{{something}}", "effect": {"settings": {"cosa-dai": "{{something}}"}, "tag": "dai-{{something}}"}},
@@ -17,11 +26,12 @@
             {"condition": {"tag": "hai-{{something}}"}, "story": "mostra-{{something}}"}
         ]},
         {"trigger": "action:dato-{{something}}", "effect": {"untag": "hai-{{something}}"}},
-        {"trigger": "qrcode:chi-{{someone}}", "switch": [
-            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "{{someone}}"}, "page": "welcome"},
-            {"condition": {"setting": "chi-sei", "equals": "{{someone}}"}, "page": "welcome"},
-            {"condition": {"tag": "dai-qualcosa"}, "settings": {"dai-a-chi": "{{someone}}"}, "story": "dai-a", "untag": ["dai-qualcosa", "hai-{{cosa-dai}}"]},
-            {"story": "chi-{{someone}}"}
+        {"trigger": "qrcode:chi-{{elementoA}}-{{elementoB}}", "condition": {"noTag": "chi-sei"}, "effect": {"tag": ["accesso-{{elementoA}}", "accesso-{{elementoB}}"]}},
+        {"trigger": "qrcode:chi-{{elementoA}}-{{elementoB}}", "switch": [
+            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "{{elementoA}}-{{elementoB}}"}, "page": "welcome"},
+            {"condition": {"setting": "chi-sei", "equals": "{{elementoA}}-{{elementoB}}"}, "page": "welcome"},
+            {"condition": {"tag": "dai-qualcosa"}, "settings": {"dai-a-chi": "{{elementoA}}-{{elementoB}}"}, "story": "dai-a", "untag": ["dai-qualcosa", "hai-{{cosa-dai}}"]},
+            {"story": "chi-{{elementoA}}-{{elementoB}}"}
         ]},
         {"trigger": "qrcode:combo-fuoco-acqua", "effect": {"story": "combo-fuoco-acqua"}},
         {"trigger": "qrcode:combo-fuoco-terra", "effect": {"story": "combo-fuoco-terra"}},
@@ -29,6 +39,15 @@
         {"trigger": "qrcode:combo-acqua-terra", "effect": {"story": "combo-acqua-terra"}},
         {"trigger": "qrcode:combo-acqua-aria", "effect": {"story": "combo-acqua-aria"}},
         {"trigger": "qrcode:combo-terra-aria", "effect": {"story": "combo-terra-aria"}},
+        {"trigger": "qrcode:task-{{challenge}}", "effect": {"story": "task-{{challenge}}"}},
+        {"trigger": "submit:task-{{challenge}}", "switch": [
+            {
+                "condition": {"formvalue": "codice", "equals": "{{correct}}"}, 
+                "tag": "task-{{challenge}}-success",
+                "score": 1
+            },
+            {"story": "generic-failure"}
+        ]},
         {"trigger": "start", "effect": {"page": "introduction"}}
     ],
     "pages": [
@@ -43,12 +62,18 @@
         {"id": "dai-oggetto", "url": "~/dai-oggetto.html"}
     ],
     "stories": [
+        {"id": "generic-failure", "url": "~/generic-failure.html", "template": "~/story-template.html"},
+        {"id": "non-hai-accesso", "url": "~/non-hai-accesso.html", "template": "~/story-template.html"},
         {"id": "dai-a", "url": "~/dai-a.html", "template": "~/story-template.html"},
         {"id": "chi-tizio", "url": "~/chi-tizio.html", "template": "~/story-template.html"},
         {"id": "mostra-fuoco", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "fuoco"}},
         {"id": "mostra-terra", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "terra"}},
         {"id": "mostra-aria", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "aria"}},
         {"id": "mostra-acqua", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "acqua"}},
+        {"id": "mostra-talismano", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "talismano"}},
+        {"id": "mostra-globo", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "globo"}},
+        {"id": "task-maze", "url": "~/tasks/task-maze.html", "template": "~/story-template.html"},
+        {"id": "task-lance", "url": "~/tasks/task-lance.html", "template": "~/story-template.html"},
         {"id": "task-codice", "url": "~/task-codice.html", "template": "~/story-template.html"},
         {"id": "combo-fuoco-acqua", "url": "~/mostra-combo.html", "template": "~/story-template.html", "data": {"combo1": "fuoco", "combo2": "acqua"}},
         {"id": "combo-fuoco-terra", "url": "~/.html", "template": "~/story-template.html", "data": {"combo1": "fuoco", "combo2": "terra"}},
