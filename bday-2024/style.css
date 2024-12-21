@@ -82,6 +82,7 @@ button img {
     max-width: 90%;
 }
 
+
 @media screen and (orientation:portrait) {
     .text-page {
         padding-bottom: 70px;

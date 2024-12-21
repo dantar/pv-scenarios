@@ -43,7 +43,7 @@
         {"trigger": "submit:task-{{challenge}}", "switch": [
             {
                 "condition": {"formvalue": "codice", "equals": "{{correct}}"}, 
-                "tag": "task-{{challenge}}-success",
+                "tag": "hai-{{challenge}}",
                 "score": 1
             },
             {"story": "generic-failure"}
@@ -70,8 +70,8 @@
         {"id": "mostra-terra", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "terra"}},
         {"id": "mostra-aria", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "aria"}},
         {"id": "mostra-acqua", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "acqua"}},
-        {"id": "mostra-talismano", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "talismano"}},
-        {"id": "mostra-globo", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "globo"}},
+        {"id": "mostra-lance", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "lance"}},
+        {"id": "mostra-maze", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "maze"}},
         {"id": "task-maze", "url": "~/tasks/task-maze.html", "template": "~/story-template.html"},
         {"id": "task-lance", "url": "~/tasks/task-lance.html", "template": "~/story-template.html"},
         {"id": "task-codice", "url": "~/task-codice.html", "template": "~/story-template.html"},

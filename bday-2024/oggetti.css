@@ -52,22 +52,22 @@
     display: initial;
 }
 
-.tag-hai-talismano .se-hai.hai-talismano {
+.tag-hai-lance .se-hai.hai-lance {
     display: initial;
 }
-.tag-hai-talismano .non-hai.hai-talismano {
+.tag-hai-lance .non-hai.hai-lance {
     display: none;
 }
-.setting-dai-talismano .dai-cosa.dai-talismano {
+.setting-dai-lance .dai-cosa.dai-lance {
     display: initial;
 }
 
-.tag-hai-globo .se-hai.hai-globo {
+.tag-hai-maze .se-hai.hai-maze {
     display: initial;
 }
-.tag-hai-globo .non-hai.hai-globo {
+.tag-hai-maze .non-hai.hai-maze {
     display: none;
 }
-.setting-dai-globo .dai-cosa.dai-globo {
+.setting-dai-maze .dai-cosa.dai-maze {
     display: initial;
 }

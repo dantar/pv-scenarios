@@ -56,13 +56,13 @@ def main(argv):
         head = poppable.pop(0)
         for e in poppable:
             strings.append('combo-%s-%s' % (head, e))
-            personaggi.append('%s%s' % (head[0:2], e[0:2]))
+            personaggi.append('%s%s' % (head, e))
 
     for p in personaggi:
         for e in elements:
             strings.append('dai_%s_%s' % (e, p))
 
-    oggetti = ["talismano", "globo"]
+    oggetti = ["lance", "maze"]
     templates = []
     templates.append("""
 .tag-hai-{oggetto} .se-hai.hai-{oggetto} {{
@@ -82,7 +82,7 @@ def main(argv):
     print (strings)
     print (personaggi)
     # Create QR codes
-    # create_qr_codes(strings, output_dir)
+    create_qr_codes(personaggi, output_dir)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

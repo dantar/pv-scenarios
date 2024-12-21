@@ -2,15 +2,22 @@
 .desktop {
     padding: 10px;
 }
+.image-with-caption.clickable {
+    border: 2px solid black;
+    padding: 0;
+    margin-bottom: 20px;
+}
 </style>
-<div class="fulldiv desktop">
+<div class="fullpage desktop">
 
-        <h1>Ventundodici 2024!</h1>
-        <h1>{{score}}</h1>
-        <div>
-            <button class="clickable" data-scanner="scanner">Scan!</button>
-            <button class="clickable" data-page="inventario">Inventario</button>
-            <button class="clickable" data-story="cheat">Cheat!</button>
+        <h1>Punti: {{score}}</h1>
+        <div class="image-with-caption clickable" data-scanner="scanner">
+            <img src="~/images/qrscan.png" />
+            <h2>Inquadra un codice</h2>
+        </div>
+        <div class="image-with-caption clickable" data-page="inventario">
+            <img src="~/images/inventario.png" />
+            <h2>Inventario</h2>
         </div>
 
     </div>
