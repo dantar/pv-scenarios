@@ -81,3 +81,14 @@
 .setting-dai-cages .dai-cosa.dai-cages {
     display: initial;
 }
+
+.tag-hai-bridge .se-hai.hai-bridge {
+    display: initial;
+}
+.tag-hai-bridge .non-hai.hai-bridge {
+    display: none;
+}
+.setting-dai-bridge .dai-cosa.dai-bridge {
+    display: initial;
+}
+

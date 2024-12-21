@@ -1,0 +1,81 @@
+<div class="template-replace" data-selector="#story-content">
+    <h1>Ponte sull'Abisso</h1>
+    <style>
+
+        .speso-terra-bridge {
+            display: none;
+        }
+        .tag-speso-terra-bridge .speso-terra-bridge {
+            display: initial;
+        }
+        .tag-speso-terra-bridge .nonspeso-terra-bridge {
+            display: none;
+        }
+
+        .speso-aria-bridge {
+            display: none;
+        }
+        .tag-speso-aria-bridge .speso-aria-bridge {
+            display: initial;
+        }
+        .tag-speso-aria-bridge .nonspeso-aria-bridge {
+            display: none;
+        }
+
+        .scambio-concluso {
+            display: none;
+        }
+        .tag-speso-terra-bridge.tag-speso-aria-bridge .scambio-concluso {
+            display: initial;
+        }
+    </style>
+    <div class="non-hai hai-bridge">
+        <p>
+            Il Ponte sull'Abisso sembra essere l'unico luogo dove poter imparare la Canzone del Volo.
+        </p>
+        <p>
+            Le Arpie te la potrebbero insegnare in cambio <span class="icon icon-aria"></span> e <span class="icon icon-terra"></span>
+        </p>
+
+        <div class="nonspeso-terra-bridge">
+            <p class="se-hai hai-terra">
+                Hai <span class="icon icon-terra"></span>. 
+                Se vuoi glielo <button class="clickable" data-action="spendi-terra-bridge">puoi dare</button>.
+            </p>
+            <p class="non-hai hai-terra">
+                Non hai <span class="icon icon-terra"></span> da dare. 
+            </p>
+        </div>
+        <div class="speso-terra-bridge">
+            Hai già dato <span class="icon icon-terra"></span> al Signore dell'Albero. 
+        </div>
+
+        <div class="nonspeso-aria-bridge">
+            <p class="se-hai hai-aria">
+                Hai <span class="icon icon-aria"></span>. 
+                Se vuoi glielo <button class="clickable" data-action="spendi-aria-bridge">puoi dare</button>.
+            </p>
+            <p class="non-hai hai-aria">
+                Non hai <span class="icon icon-aria"></span> da dare. 
+            </p>
+        </div>
+        <div class="speso-aria-bridge">
+            Hai già dato <span class="icon icon-aria"></span> al Signore dell'Albero. 
+        </div>
+
+        <div class="scambio-concluso">
+            <p>Le Arpie sono contente dello scambio. Puoi trascrivere la Canzone del Volo sulla pergamena:</p>
+            <div class="image-with-caption">
+                <img src="~/images/bridge.png" class="clickable" data-action="scambio2a1-bridge-terra-aria-bridge" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="se-hai hai-bridge">
+        <p>Le Arpie sono contente di averti insegnato la Canzone del Volo:</p>
+        <div class="image-with-caption">
+            <img src="~/images/bridge.png"/>
+        </div>
+    </div>
+</div>

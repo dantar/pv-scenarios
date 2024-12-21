@@ -65,7 +65,7 @@ def main(argv):
         for e in elements:
             strings.append('dai_%s_%s' % (e, p))
 
-    oggetti = ["lance", "maze", "cages"]
+    oggetti = ["lance", "maze", "cages", "bridge"]
     templates = []
     templates.append("""
 .tag-hai-{oggetto} .se-hai.hai-{oggetto} {{

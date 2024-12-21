@@ -72,9 +72,11 @@
         {"id": "mostra-lance", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "lance"}},
         {"id": "mostra-maze", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "maze"}},
         {"id": "mostra-cages", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "cages"}},
+        {"id": "mostra-bridge", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "bridge"}},
         {"id": "task-maze", "url": "~/tasks/task-maze.html", "template": "~/story-template.html"},
         {"id": "task-lance", "url": "~/tasks/task-lance.html", "template": "~/story-template.html"},
         {"id": "task-cages", "url": "~/tasks/task-cages.html", "template": "~/story-template.html"},
+        {"id": "task-bridge", "url": "~/tasks/task-bridge.html", "template": "~/story-template.html"},
         {"id": "cheat", "url": "~/cheat.html", "template": "~/story-template.html"}
     ]
 }
