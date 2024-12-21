@@ -1,24 +1,37 @@
 <style>
-.desktop {
-    padding: 10px;
-}
-.image-with-caption.clickable {
-    border: 2px solid black;
-    padding: 0;
-    margin-bottom: 20px;
-}
+    .desktop {
+        padding: 10px;
+    }
+
+    .maincontrol {
+        border: 2px solid black;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .sei-qualcuno {
+        display: none;
+    }
+    .tag-chi-sei .sei-qualcuno {
+        display: initial;
+    }
+
 </style>
 <div class="fullpage desktop">
 
-        <h1>Punti: {{score}}</h1>
-        <div class="image-with-caption clickable" data-scanner="scanner">
-            <img src="~/images/qrscan.png" />
-            <h2>Inquadra un codice</h2>
-        </div>
-        <div class="image-with-caption clickable" data-page="inventario">
-            <img src="~/images/inventario.png" />
-            <h2>Inventario</h2>
-        </div>
-
+    <h1>Punti: {{score}}</h1>
+    <div class="image-with-caption sei-qualcuno">
+        <p>Poteri: <span class="icon icon-{{potereA}}"></span> e <span class="icon icon-{{potereB}}"></span></p>
     </div>
+
+    <div class="image-with-caption clickable maincontrol" data-scanner="scanner">
+        <img src="~/images/qrscan.png" />
+        <h2>Inquadra un codice</h2>
+    </div>
+
+    <div class="image-with-caption clickable maincontrol" data-page="inventario">
+        <img src="~/images/inventario.png" />
+        <h2>Inventario</h2>
+    </div>
+
 </div>

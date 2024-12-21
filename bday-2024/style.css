@@ -82,6 +82,9 @@ button img {
     max-width: 90%;
 }
 
+.scanner-box {
+    background-color: #ffffffaa;
+}
 
 @media screen and (orientation:portrait) {
     .text-page {

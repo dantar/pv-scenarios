@@ -56,7 +56,10 @@ def main(argv):
         head = poppable.pop(0)
         for e in poppable:
             strings.append('combo-%s-%s' % (head, e))
-            personaggi.append('%s%s' % (head, e))
+            personaggi.append('%s-%s' % (head, e))
+            print("""    .icon.chi-%s-%s::after {
+        content: "Fuoco";
+    }""" % (head, e))
 
     for p in personaggi:
         for e in elements:
@@ -74,15 +77,20 @@ def main(argv):
 .setting-dai-{oggetto} .dai-cosa.dai-{oggetto} {{
     display: initial;
 }}""")
+    templates.append("""        <div class="se-hai hai-fuoco">
+            <h1 class="icon icon-{oggetto} clickable" data-close="true" data-story="mostra-{oggetto}"></h1>
+        </div>""")
+    templates.append("""        {{"id": "mostra-{oggetto}", "url": "~/mostra-{oggetto}.html", "template": "~/story-template.html", "data": {{"oggetto": "{oggetto}"}}}},""")
     for template in templates:
-        for e in (elements):
+        for e in (elements + oggetti):
             print(template.format(oggetto = e))
 
-
-    print (strings)
-    print (personaggi)
     # Create QR codes
-    create_qr_codes(personaggi, output_dir)
+    create_qr_codes(['chi-%s' % p for p in personaggi], output_dir)
+    scambi = []
+    for o in (elements + oggetti):
+        scambi = scambi + ['dai_%s_%s' % (o, p) for p in personaggi]
+    create_qr_codes(scambi, output_dir)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

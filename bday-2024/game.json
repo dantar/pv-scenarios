@@ -26,9 +26,12 @@
             {"condition": {"tag": "hai-{{something}}"}, "story": "mostra-{{something}}"}
         ]},
         {"trigger": "action:dato-{{something}}", "effect": {"untag": "hai-{{something}}"}},
-        {"trigger": "qrcode:chi-{{elementoA}}-{{elementoB}}", "condition": {"noTag": "chi-sei"}, "effect": {"tag": ["accesso-{{elementoA}}", "accesso-{{elementoB}}"]}},
         {"trigger": "qrcode:chi-{{elementoA}}-{{elementoB}}", "switch": [
-            {"condition": {"noTag": "chi-sei"}, "tag": "chi-sei", "settings": {"chi-sei": "{{elementoA}}-{{elementoB}}"}, "page": "welcome"},
+            {"condition": {"noTag": "chi-sei"}, 
+                "tag": ["chi-sei", "accesso-{{elementoA}}", "accesso-{{elementoB}}"], 
+                "settings": {"chi-sei": "{{elementoA}}-{{elementoB}}", "potereA": "{{elementoA}}", "potereB": "{{elementoB}}"}, 
+                "page": "welcome"
+            },
             {"condition": {"setting": "chi-sei", "equals": "{{elementoA}}-{{elementoB}}"}, "page": "welcome"},
             {"condition": {"tag": "dai-qualcosa"}, "settings": {"dai-a-chi": "{{elementoA}}-{{elementoB}}"}, "story": "dai-a", "untag": ["dai-qualcosa", "hai-{{cosa-dai}}"]},
             {"story": "chi-{{elementoA}}-{{elementoB}}"}
@@ -48,7 +51,7 @@
             },
             {"story": "generic-failure"}
         ]},
-        {"trigger": "start", "effect": {"page": "introduction"}}
+        {"trigger": "start", "effect": {"page": "introduction", "score": 0}}
     ],
     "pages": [
         {"id": "introduction", "url": "~/introduction.html"},
