@@ -1,0 +1,41 @@
+<div class="template-replace" data-selector="#story-content">
+    <h1>Antico Re</h1>
+
+    <style>
+        .task-success {
+            display: none;
+        }
+        .tag-hai-king .task-success {
+            display: initial;
+        }
+        .tag-hai-king .task-todo {
+            display: none;
+        }
+    </style>
+
+    <div class="task-todo">
+        <div>
+            Sembra impossibile capire l'Antico Re del Volo.
+        </div>
+        <div class="non-hai hai-bridge">
+            <p>Forse per capire le sue parole ti servirà interpretare la Canzone del Volo, al Ponte sull'Abisso.</p>
+        </div>
+        <div class="se-hai hai-bridge">
+            <p>Hai con te la Canzone del Volo, puoi consultarla, se vuoi, per capire le parole dell'Antico Re.</p>
+            <h2 class="icon icon-bridge clickable" data-story="mostra-bridge"></h2>
+        </div>
+    
+        <div class="game-form">
+            <input class="forminput" name="correct" type="hidden" value="5943" />
+            <input class="forminput" name="codice" type="number" max="9999" maxlength="4" size="4" />
+            <button class="clickable" data-submit="task-king:.forminput">OK</button>
+        </div>
+    </div>
+
+    <div class="se-hai hai-king">
+        <p>Come dono per aver parlato con lui l'Antico Re ti ha dato la sua vecchia Corona:</p>
+        <div class="image-with-caption">
+            <img src="~/images/king.png"/>
+        </div>
+    </div>
+</div>

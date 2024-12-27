@@ -10,7 +10,7 @@ SCRIPTDIR=`pwd`
 MAINDIR=`dirname $SCRIPTDIR`
 cd -
 
-GAME=pineville
+GAME=sogno
 
 DEST=atlante.elabor.biz:dist/
 DEST=dantar:html/

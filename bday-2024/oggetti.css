@@ -92,3 +92,13 @@
     display: initial;
 }
 
+.tag-hai-king .se-hai.hai-king {
+    display: initial;
+}
+.tag-hai-king .non-hai.hai-king {
+    display: none;
+}
+.setting-dai-king .dai-cosa.dai-king {
+    display: initial;
+}
+

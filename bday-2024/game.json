@@ -25,7 +25,7 @@
         {"trigger": "qrcode:dai_{{something}}_{{chi-sei}}", "effect": {"tag": "hai-{{something}}", "story": "mostra-{{something}}"}},
         {"trigger": "qrcode:fonte-{{something}}", "switch": [
             {"condition": {"noTag": "accesso-{{something}}"}, "story": "non-hai-accesso"},
-            {"condition": {"tag": "hai-{{something}}"}, "story": "mostra-{{something}}"}
+            {"tag": "hai-{{something}}", "story": "mostra-{{something}}"}
         ]},
         {"trigger": "action:dato-{{something}}", "effect": {"untag": "hai-{{something}}"}},
         {"trigger": "qrcode:chi-{{elementoA}}-{{elementoB}}", "switch": [
@@ -73,10 +73,12 @@
         {"id": "mostra-maze", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "maze"}},
         {"id": "mostra-cages", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "cages"}},
         {"id": "mostra-bridge", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "bridge"}},
+        {"id": "mostra-king", "url": "~/mostra-oggetto.html", "template": "~/story-template.html", "data": {"oggetto": "king"}},
         {"id": "task-maze", "url": "~/tasks/task-maze.html", "template": "~/story-template.html"},
         {"id": "task-lance", "url": "~/tasks/task-lance.html", "template": "~/story-template.html"},
         {"id": "task-cages", "url": "~/tasks/task-cages.html", "template": "~/story-template.html"},
         {"id": "task-bridge", "url": "~/tasks/task-bridge.html", "template": "~/story-template.html"},
+        {"id": "task-king", "url": "~/tasks/task-king.html", "template": "~/story-template.html"},
         {"id": "cheat", "url": "~/cheat.html", "template": "~/story-template.html"}
     ]
 }
